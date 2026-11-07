@@ -247,3 +247,9 @@
   }
   .path-lede{margin-bottom:34px;color:#4A5B6E}
   .contact-lede{color:#4A5B6E}
+  .path-intro{display:grid;grid-template-columns:1fr auto;gap:32px 56px;align-items:start}
+  .portrait{width:200px;height:200px;object-fit:cover;border-radius:3px;border:1px solid var(--paper-2);box-shadow:8px 8px 0 var(--paper-2);display:block}
+  @media(max-width:640px){
+    .path-intro{grid-template-columns:1fr}
+    .portrait{width:140px;height:140px;grid-row:1}
+  }
