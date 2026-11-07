@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Greg Lewis — Security Engineer in federal IT. Cloud detection engineering, FedRAMP 20x compliance, and AI security.">
+<title>Greg Lewis — Security Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="mark" href="#top">GREG<span>Q</span>LEWIS</a>
+    <nav>
+      <a href="#scope">Scope</a>
+      <a href="#evidence">Work</a>
+      <a href="#path">Path</a>
+      <a href="#notes">Notes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <p class="eyebrow">Security Engineer — Federal Cloud</p>
+    <h1>I secure federal cloud systems and <em>prove</em> they're secure.</h1>
+    <p class="lede">Cloud security engineering in federal IT: AWS detection and response, FedRAMP 20x compliance, and AI security review. Six years from help desk ticket queue to authorization boundary.</p>
+    <p class="status"><span class="dot"></span>Currently exploring: detection-as-code and LLM guardrail testing</p>
+
+    <div class="boundary reveal">
+      <span class="boundary-label">Authorization Boundary — What I Work Inside</span>
+      <div class="nodes">
+        <div class="node">
+          <span class="id">CLOUD</span>
+          <span class="name">AWS Security</span>
+          <p class="desc">GuardDuty, Security Hub, CloudTrail, IAM. Detection engineering and least-privilege design.</p>
+        </div>
+        <div class="node">
+          <span class="id">COMPLIANCE</span>
+          <span class="name">FedRAMP 20x</span>
+          <p class="desc">NIST 800-53 control mapping, machine-checkable evidence, SOC 2 and ISO 27001:2022 crosswalks.</p>
+        </div>
+        <div class="node">
+          <span class="id">AI SECURITY</span>
+          <span class="name">Model Red Teaming</span>
+          <p class="desc">Bedrock-hosted LLM testing mapped to MITRE ATLAS and the OWASP LLM Top 10.</p>
+        </div>
+        <div class="node">
+          <span class="id">LAB</span>
+          <span class="name">Homelab</span>
+          <p class="desc">Self-hosted SIEM, observability, and purple team exercises on isolated infrastructure.</p>
+        </div>
+      </div>
+      <div class="legend">
+        <span>Vuln management <b>Tenable</b></span>
+        <span>Cert <b>Security+ CE</b></span>
+        <span>Degree <b>MS Cybersecurity Technology</b></span>
+        <span>Based <b>DMV</b></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="scope">
+  <div class="wrap">
+    <p class="eyebrow reveal">Scope</p>
+    <h2 class="reveal">Three things I'm consistently good at.</h2>
+    <div class="scope-grid reveal">
+      <div class="scope-cell">
+        <span class="tag">Detect</span>
+        <p>Building and tuning detection in AWS-native tooling so alerts mean something. Coming out of a SOC, I know what a bad alert costs the person on the other end of it.</p>
+      </div>
+      <div class="scope-cell">
+        <span class="tag">Prove</span>
+        <p>Translating between engineers and auditors. Control mapping, evidence collection, and keeping a system authorizable without grinding delivery to a halt.</p>
+      </div>
+      <div class="scope-cell">
+        <span class="tag">Break</span>
+        <p>Testing systems the way an attacker would — including the AI ones. Findings written so they can actually be fixed, not just filed.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="evidence">
+  <div class="wrap">
+    <p class="eyebrow reveal">Work</p>
+    <h2 class="reveal">Things I built, with the code attached.</h2>
+
+    <div class="proj reveal">
+      <div>
+        <h3>Cloud Attack Detection Lab</h3>
+        <p>Four AWS attack techniques simulated end to end: IAM enumeration, role-abuse privilege escalation, credential theft, and S3 exfiltration. Each one is captured across CloudTrail, VPC Flow Logs and GuardDuty, with a Sigma rule, a custom Wazuh rule confirmed firing, and an IR playbook.</p>
+        <span class="stack">AWS · Terraform · Python/boto3 · Sigma · Wazuh · OpenSearch</span>
+      </div>
+      <a class="link" href="https://github.com/gregqlewis/cloud-attack-detection-lab">View repo</a>
+    </div>
+
+    <div class="proj reveal">
+      <div>
+        <h3>AI Security Lab: LLM Red Team Assessment</h3>
+        <p>Garak against Meta Llama 3.1 on AWS Bedrock, with findings mapped to MITRE ATLAS and the OWASP LLM Top 10. DAN jailbreaks succeeded 100% of the time and prompt injection up to 71%, while encoding tricks mostly failed. The model's weakness is instruction-following, not content recognition.</p>
+        <span class="stack">Garak · AWS Bedrock · MITRE ATLAS · OWASP LLM Top 10</span>
+      </div>
+      <a class="link" href="https://github.com/gregqlewis/ai-security-lab">View repo</a>
+    </div>
+
+    <div class="proj reveal">
+      <div>
+        <h3>Purple Team Homelab</h3>
+        <p>ATT&amp;CK-mapped attack and detection environment with its own observability stack, alerting and incident write-ups. Recent work: validating a T1087 detection that turned out never to have fired, then reconciling a live ruleset that had drifted from version control.</p>
+        <span class="stack">Wazuh · auditd · Grafana · Detection validation · Incident response</span>
+      </div>
+      <a class="link" href="https://github.com/gregqlewis/purple-team-homelab">View repo</a>
+    </div>
+
+    <div class="proj reveal">
+      <div>
+        <h3>Cloud Security Labs</h3>
+        <p>Multi-cloud IAM and baseline security in Terraform: account baselines, least-privilege roles with permission boundaries, IAM Access Analyzer, MFA-enforced role assumption, and an AWS vs Azure IAM architecture comparison.</p>
+        <span class="stack">Terraform · AWS IAM · Azure RBAC</span>
+      </div>
+      <a class="link" href="https://github.com/gregqlewis/cloud-security-labs">View repo</a>
+    </div>
+
+    <div class="proj reveal">
+      <div>
+        <h3>Homelab Build Notes</h3>
+        <p>The rawer companion site: architecture, sanitized configs, detection rules and a build log for the environment where the labs above run.</p>
+        <span class="stack">Reference patterns · Sanitized configs · Lessons</span>
+      </div>
+      <a class="link" href="https://gregshomelab.com">Read build notes</a>
+    </div>
+  </div>
+</section>
+
+<section id="path">
+  <div class="wrap">
+    <p class="eyebrow reveal">Path</p>
+    <h2 class="reveal">Six years, one company, four titles.</h2>
+    <p class="lede reveal path-lede">Every step here was an internal move. I'd rather show the whole climb than pretend I started at the top — the help desk years are why I'm useful to the people I now write findings for.</p>
+    <div class="path reveal">
+      <div class="step current">
+        <span class="when">2026 —</span>
+        <div>
+          <div class="what">Security Engineer</div>
+          <p class="note">Serving as security and compliance engineer on a federal contract: AWS security engineering, FedRAMP 20x and NIST 800-53 compliance, and AI security review.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="when">2022 – 2026</span>
+        <div>
+          <div class="what">Security Analyst</div>
+          <p class="note">Served as a SOC analyst on a federal contract: threat hunting, incident response, and alert triage in AWS. Engineered AWS security controls in Terraform, ran vulnerability management, and led the ISO 27001:2022 program through certification and recertification.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="when">2021 – 2022</span>
+        <div>
+          <div class="what">Junior Security Analyst</div>
+          <p class="note">Security event monitoring, AWS controls for HIPAA and PHI protection, and security impact analyses aligned with NIST RMF.</p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="when">2020 – 2021</span>
+        <div>
+          <div class="what">Help Desk Analyst</div>
+          <p class="note">Started April 2020 supporting a large-scale web application. Learned the environment from the inside out.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="notes">
+  <div class="wrap">
+    <p class="eyebrow reveal">Notes</p>
+    <h2 class="reveal">Writing starts here.</h2>
+    <div class="empty reveal">
+      <p>Nothing published yet. This is where the longer pieces go: the reasoning that doesn't fit in a repo README. First three on the list:</p>
+      <ul>
+        <li>Going from SOC analyst to cloud security engineer without leaving the company</li>
+        <li>The detection that never fired: validating T1087 and finding ruleset drift</li>
+        <li>Behavioral, not perceptual: what Garak showed about Llama 3.1's guardrails</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <p class="eyebrow reveal">Contact</p>
+    <h2 class="reveal">Open to talking.</h2>
+    <p class="lede reveal contact-lede">Federal cloud security, FedRAMP 20x, AI security testing, or the homelab. If you're trying to make the same jump I did, I'll answer that email too.</p>
+    <div class="links reveal">
+      <a href="mailto:greg@gregqlewis.com">greg@gregqlewis.com</a>
+      <a href="https://github.com/gregqlewis">GitHub</a>
+      <a href="https://www.linkedin.com/in/gregqlewis">LinkedIn</a>
+      <a href="https://gregshomelab.com">Homelab site</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span>GREGQLEWIS.COM</span>
+    <span>Baltimore–Washington area · Last updated November 2026</span>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>
