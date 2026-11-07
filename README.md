@@ -4,7 +4,7 @@ Personal portfolio site. Static HTML, CSS, and JS with no build step, deployed a
 
 - `wrangler.jsonc`: Worker config; serves `public/` as static assets
 - `public/index.html`: the page
-- `public/style.css`: kept out of the HTML so the CSP can run without `unsafe-inline` (the page has no JavaScript)
+- `public/style.css`, `public/main.js`: kept out of the HTML so the CSP can run without `unsafe-inline`
 - `public/_headers`: security headers applied to every response
 
 The old Jekyll site lives on `main` and stays on GitHub Pages until DNS moves.
